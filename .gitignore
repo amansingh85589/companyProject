@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables — never commit real secrets
+.env
+**/.env
+.env.local
+**/.env.local
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+
+# Vite cache
+.vite/
+**/.vite/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
