@@ -1,4 +1,4 @@
- # Multi-Tenant Feature Flag Management System
+# Multi-Tenant Feature Flag Management System
 
 A small SaaS-style system that lets a software provider onboard multiple organizations, and lets each organization independently manage on/off feature flags for their own users — with full data isolation between organizations.
 
@@ -12,9 +12,15 @@ The system has three roles, each with their own dedicated frontend application:
 
 | Role | App | Can do |
 |---|---|---|
-| **Super Admin** | `superadmin-frontend` | Log in (static credentials SUPERADMIN_EMAIL=super@byepo.com SUPERADMIN_PASSWORD=changeme123), create organizations, view all organizations |
+| **Super Admin** | `superadmin-frontend` | Log in with static credentials (below), create organizations, view all organizations |
 | **Org Admin** | `admin-frontend` | Sign up under an org, log in, create/enable/disable/delete feature flags — scoped to their own org only |
 | **End User** | `user-frontend` | Sign up under an org, log in, check whether a specific feature is enabled for their org |
+
+> **Super Admin demo credentials** (set in `backend/.env`, not tied to any DB record):
+> ```
+> Email:    super@byepo.com
+> Password: changeme123
+> ```
 
 All three frontends talk to a single Node.js/Express backend with a shared MongoDB database.
 
